@@ -1,0 +1,47 @@
+integrations:
+  quickbooks-sandbox:
+    actions:
+      read-customer:
+        description: |
+          Reads a customer from QuickBooks.
+        input: CustomerId
+        scopes: com.intuit.quickbooks.accounting
+        output: Customer
+        endpoint: GET /customer
+  quickbooks:
+    actions:
+      read-customer:
+        description: |
+          Reads a customer from QuickBooks.
+        input: CustomerId
+        scopes: com.intuit.quickbooks.accounting
+        output: Customer
+        endpoint: GET /customer
+
+models:
+  CustomerId:
+    id: string
+  Customer:
+    Taxable: boolean
+    Job: boolean
+    BillWithParent: boolean
+    Balance: number
+    BalanceWithJobs: number
+    CurrencyRef:
+      value: string
+      name: string
+    PreferredDeliveryMethod: string
+    IsProject: boolean
+    domain: string
+    sparse: boolean
+    Id: string
+    SyncToken: string
+    MetaData:
+      CreateTime: string
+      LastUpdatedTime: string
+    FullyQualifiedName: string
+    DisplayName: string
+    PrintOnCheckName: string
+    Active: boolean
+    DefaultTaxCodeRef:
+      value: string
