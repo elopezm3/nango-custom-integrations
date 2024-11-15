@@ -466,34 +466,6 @@ export const NangoFlows = [
       }
     ],
     "postConnectionScripts": []
-  },
-  {
-    "providerConfigKey": "quickbooks",
-    "syncs": [],
-    "actions": [
-      {
-        "name": "read-customer",
-        "type": "action",
-        "description": "Reads a customer from QuickBooks.",
-        "version": "",
-        "scopes": [
-          "com.intuit.quickbooks.accounting"
-        ],
-        "input": "CustomerId",
-        "output": [
-          "Customer"
-        ],
-        "usedModels": [
-          "Customer",
-          "CustomerId"
-        ],
-        "endpoint": {
-          "method": "GET",
-          "path": "/customer"
-        }
-      }
-    ],
-    "postConnectionScripts": []
   }
 ] as const;
 // ------ /Flows
